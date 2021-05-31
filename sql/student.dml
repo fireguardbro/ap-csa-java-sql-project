@@ -1,0 +1,4 @@
+## Bunch of insert statement to populate data into postgresql DB
+insert into student(name,gpa) values('joe',3.95);
+insert into student(name,gpa) values('nishad',3.692);
+insert into student(name,gpa) values('ivan',3.8124);
