@@ -12,6 +12,7 @@ Simple Java JDBC project
 
 ### ADD DDL and DMLs in Postgres DB
 * Make sure that PG DB DB_NAME is created and that PG instance is running.
+  * /usr/local/Cellar/postgresql@10/10.17/bin/pg_ctl start -D full_path/instance_name
 * Add Table definition first using psql
   * psql -d DB_NAME -f student.ddl
 * Add some data rows
