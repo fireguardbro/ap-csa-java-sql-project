@@ -10,11 +10,26 @@ Simple Java JDBC project
 * JDBC driver
   * https://jdbc.postgresql.org/download/postgresql-42.2.20.jar
 
+### ADD DDL and DMLs in Postgres DB
+* Make sure that PG DB DB_NAME is created and that PG instance is running.
+* Add Table definition first using psql
+  * psql -d DB_NAME -f student.ddl
+* Add some data rows
+  * psql -d DB_NAME -f student.dml
+* Verify that records are present usings simple SQL
+  * `select * from student;`
+  
 ### How to compile?
 ````bash
+##Set proper PATH and CLASSPATH
+export PATH=/proper_path/jdk-11.0.2.jdk/Contents/Home/bin:$PATH:/usr/local/Cellar/postgresql@10/10.17/bin
+export CLASSPATH=.:$CLASSPATH:/proper_path/jdbc-driver/postgresql-42.2.20.jar
+##Compile as - It can be enhanced with Maven or Gradle build later
 javac com/myrhs/Student.java
 javac com/myrhs/SchoolMain.java
+
 ````
 
 ### How to run?
+* Make sure that proper PATH and CLASSPATH is set.
 * `java com.myrhs.SchoolMain`
